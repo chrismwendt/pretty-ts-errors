@@ -1,8 +1,15 @@
-name: app
+name: pretty-ts-errors
 version: 0.1.0.0
 dependencies:
   - base
+  - Diff
+  - diff-gestalt
+  - split
+  - bytestring
+  - rainbow
+  - streaming
+  - errors
 executables:
-  app:
+  pretty-ts-errors:
     source-dirs: src
     main: Main.hs

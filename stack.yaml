@@ -35,10 +35,19 @@ resolver: lts-12.7
 #  - wai
 packages:
 - .
+# for S.readFile
+- location:
+    git: https://github.com/haskell-streaming/streaming.git
+    commit: dbebbd742b285caae512302b7c2bd6598a649ff5
+  extra-dep: true
 # Dependency packages to be pulled from upstream that are not in the resolver
 # using the same syntax as the packages field.
 # (e.g., acme-missiles-0.3)
-# extra-deps: []
+extra-deps:
+- diff-gestalt-0.2.0.0
+- KMP-0.1.0.2
+- string-similarity-0.1.0.0
+- suffixtree-0.2.2.1
 
 # Override default flag values for local packages and extra-deps
 # flags: {}
