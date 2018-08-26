@@ -55,7 +55,7 @@ wordChunks string =
   let
     category char
       | isSpace char = CSpace
-      | isAlpha char = CWord
+      | isAlpha char || char `elem` ['-', '_'] = CWord
       | otherwise = COther
   in
     groupBy ((==) `on` category) string
